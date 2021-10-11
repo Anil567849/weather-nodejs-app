@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/weather.css">
+</head>
+<body>
+    
+    {{!-- include header  --}}
+    {{>header}}
+
+    <section id="sectionWeather">
+        <div class="container">
+
+            <div class="search-box">
+                <form class="temp-form">
+                    <input type="text" name="cityName" id="cityName" placeholder="Type here...">
+                    <input type="submit" value="submit" id="submitBtn">
+                </form>
+            </div>
+
+            <div id="temp-info-box">
+                <div class="top-layer">
+                    <p id="day"></p>
+                    <p id="today-date"></p>
+                </div>
+                <div id="main-layer">
+                    <p id="city-name"></p>
+                    <div class="middle-layer data-hide">
+                        <p id="temp"><span id="tempReal"></span><sup>o</sup>C</p>
+                        <p id="temp-status" style="margin-top: 2rem;"></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    {{!-- include footer  --}}
+    {{>footer}}
+
+
+    <script src="js/main.js"></script>
+
+
+</body>
+</html>
